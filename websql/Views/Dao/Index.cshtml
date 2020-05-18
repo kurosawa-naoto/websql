@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    List<Usertbl> utblList = (List<Usertbl>)ViewData["list"];
+}
+
+<h1>Index</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Birth</th>
+            <th>Pass</th>
+        </tr>
+    </thead>
+    <tbdody>
+        @foreach (Usertbl utbl in utblList)
+        {
+            <tr>
+                <td>@utbl.Id</td>
+                <td>@utbl.Name</td>
+                <td>@utbl.Gender</td>
+                <td>@utbl.Birth</td>
+                <td>@utbl.Pass</td>
+            </tr>
+        }
+    </tbdody>
+</table>
